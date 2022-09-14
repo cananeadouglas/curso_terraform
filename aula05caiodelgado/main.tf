@@ -32,6 +32,7 @@ resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
   tags          = var.instance_tags
+  key_name = "notebook"
 
   lifecycle {
     create_before_destroy = true
