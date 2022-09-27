@@ -1,3 +1,5 @@
 */.terraform/*
 .terraform/*
 *.out
+*.tfstate*
+*/*.tfstate*
