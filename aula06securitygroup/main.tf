@@ -41,7 +41,7 @@ resource "tls_private_key" "rsa" {
 
 resource "local_file" "TF-key" {
   content = tls_private_key.rsa.private_key_pem
-  filename = "tfkey"
+  filename = "tfkey.pem"
 }
 
 resource "aws_instance" "web" {
@@ -63,6 +63,7 @@ resource "aws_instance" "web" {
 }
 
 # Criando Elastic IP
+
 resource "aws_eip" "elasticip" {
   instance = aws_instance.web.id
 }

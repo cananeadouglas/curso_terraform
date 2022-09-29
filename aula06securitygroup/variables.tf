@@ -16,12 +16,6 @@ variable "aws_profile" {
   default     = "default"
 }
 
-#variable "instance_ami" {
-#  type        = string
-#  description = "tipo de máquina"
-#  default     = "ami-052efd3df9dad4825"
-#}
-
 variable "instance_type" {
   type        = string
   description = "configuração"
