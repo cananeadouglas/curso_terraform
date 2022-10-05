@@ -1,5 +1,5 @@
 terraform {
-  required_version = "0.14.11"
+  required_version = "1.3.0"
 
   required_providers {
     aws = {
@@ -53,7 +53,7 @@ resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
   tags          = var.instance_tags
-  
+
 
   security_groups = [aws_security_group.secu_group_t.name]
 
