@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "aws" {
-  region = var.region
+  region                  = var.region
   shared_credentials_file = var.aws_shared_credentials_file
 }
 
@@ -26,7 +26,8 @@ resource "aws_lightsail_static_ip" "static_ip" {
 
 # SSH Key Pair
 resource "aws_lightsail_key_pair" "intance_key_pair" {
-  name = var.intance_key_pair
+  name = "importing"
+  public_key = "${file("~/.ssh/id_rsa.pub")}"
 }
 
 # Wordpress

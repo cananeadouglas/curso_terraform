@@ -6,7 +6,7 @@ variable "region" {
 variable "aws_shared_credentials_file" {
   type        = string
   description = ""
-  default     = "/home/terraform_doug/.aws/credentials"
+  default     = "$HOME/.aws/credentials"
 }
 
 variable "instance_availability_zone" {
